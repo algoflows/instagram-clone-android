@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
       InstagramCloneTheme {
         // A surface container using the 'background' color from the theme
         Surface(color = MaterialTheme.colors.background) {
-         instagramApp()
+         InstagramApp()
         }
       }
     }
@@ -39,7 +39,7 @@ sealed class Destination(val route: String) {
 }
 
 @Composable
-fun instagramApp() {
+fun InstagramApp() {
   val vm = hiltViewModel<IgViewModel>()
   val navController = rememberNavController()
 
@@ -54,6 +54,6 @@ fun instagramApp() {
 @Composable
 fun DefaultPreview() {
   InstagramCloneTheme {
-    instagramApp()
+    InstagramApp()
   }
 }
