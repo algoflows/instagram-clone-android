@@ -1,0 +1,27 @@
+buildscript {
+    ext {
+        compose_version = '1.1.0-beta01'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // testing classpath block location
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath "com.google.gms:google-services:4.3.12"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.41"
+    }
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false
+    id 'com.google.dagger.hilt.android' version '2.41' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
